@@ -38,3 +38,10 @@ angular.module('app.filter', [])
 	}
 
 })
+
+.filter('show', function(){
+	return function(id) {
+		return id;
+		// body...
+	}
+})

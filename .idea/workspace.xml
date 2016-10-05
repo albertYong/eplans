@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71386546-7cc0-4b6b-9166-ce27416f8013" name="Default" comment="" />
+    <list default="true" id="71386546-7cc0-4b6b-9166-ce27416f8013" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/filter.js" afterPath="$PROJECT_DIR$/www/js/filter.js" />
+    </list>
     <ignored path="ebeacon-ionic.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,7 +113,7 @@
       <file leaf-file-name="link.service.server.js" pinned="false" current-in-tab="true">
         <entry file="file://$USER_HOME$/shortlink/public/server/link.service.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-264">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -296,15 +298,15 @@
       <workItem from="1475525728436" duration="3502000" />
       <workItem from="1475532849636" duration="1009000" />
       <workItem from="1475610301371" duration="2048000" />
-      <workItem from="1475640364613" duration="832000" />
+      <workItem from="1475640364613" duration="2077000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28317000" />
+    <option name="totallyTimeSpent" value="29562000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1924" height="1038" extended-state="0" />
+    <frame x="-8" y="0" width="1924" height="1038" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -780,7 +782,7 @@
     </entry>
     <entry file="file://$USER_HOME$/shortlink/public/server/link.service.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-264">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
