@@ -5,7 +5,7 @@
 
           <div class="list">
 
-            <div ng-repeat= "plan in plans">
+            <div ng-repeat= "p in plan">
             <!-- <a class="item item-icon-right" ng-href="#/page/eplans/{{plan.id}}">
               {{plan.name}}
               <span class="item-note">
@@ -14,8 +14,8 @@
             </a>
             </div> -->
 
-            <button class="button button-full button-stable" ng-click="redirect(plan.id)">
-              {{plan.name | show}}
+            <button class="button button-full button-stable" ng-click="redirect(p)">
+              {{p | planName}}
               <span class="item-note">
                 Details
               </span>

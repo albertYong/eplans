@@ -106,8 +106,13 @@ angular.module('app.controllers', [])
 .controller('ePlansCtrl', function ($scope, $state, $stateParams, User, ePlans) {
   
   $scope.plans = ePlans.getLocal();
-
   console.log($scope.plans);
+  $scope.plan = [];
+  angular.forEach($scope.plans, function(value, key) {
+    this.push(value.id);
+  }, $scope.plan);
+
+  console.log($scope.plan);
 
   $scope.redirect = function (pid) {
     console.log(pid);
@@ -310,7 +315,11 @@ function ($scope, $stateParams, $state, $location, $ionicHistory, User) {
   $scope.groups = Group.getLocal();
   console.log($scope.groups); 
   console.log($scope.user.memberof);
-
+  $scope.group = [];
+  angular.forEach($scope.groups, function(value, key) {
+    this.push(value.gid);
+  }, $scope.group);
+  console.log($scope.group);
 
   $scope.createGroup = function () {
     $state.go('tabsController.groupAdd');
