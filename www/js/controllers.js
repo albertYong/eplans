@@ -114,9 +114,8 @@ angular.module('app.controllers', [])
 
   console.log($scope.plan);
 
-  $scope.redirect = function (pid) {
-    console.log(pid);
-    $state.go('tabsController.ePlansDetail',{pid:pid})
+  $scope.redirect = function (epid) {
+    $state.go('tabsController.ePlansDetail',{epid:epid})
     // body...
   }
 
@@ -157,8 +156,8 @@ $scope.submit = function(){
 console.log("hi");
 $scope.plans = ePlans.getLocal();
 console.log($scope.plans);
-console.log($state.params.pid);
-var pid = $state.params.pid;
+console.log($state.params.epid);
+var pid = $state.params.epid;
 // $scope.plan = $scope.plans.$state.params.pid;
 $scope.plan = $scope.plans[pid];
 $scope.name = $scope.plan.name;
@@ -325,8 +324,8 @@ function ($scope, $stateParams, $state, $location, $ionicHistory, User) {
     $state.go('tabsController.groupAdd');
   }
 
-  $scope.redirect = function(gid) {
-    $state.go('tabsController.groupDetail',{gid: gid});
+  $scope.redirect = function(gpid) {
+    $state.go('tabsController.groupDetail',{gpid: gpid});
   }
 
   $scope.redirectM = function(mGid) {
@@ -380,19 +379,19 @@ function ($scope, $stateParams, $state, $location, $ionicHistory, User) {
 
   $scope.user = User.get();
   console.log($scope.user);
-  console.log($stateParams.gid);
+  console.log($stateParams.gpid);
   $scope.eplans = ePlans.getLocal();
   $scope.groups = Group.getLocal();
-  $scope.group = $scope.groups[$stateParams.gid];
-  $scope.sharep = $scope.groups[$stateParams.gid].sharep;
+  $scope.group = $scope.groups[$stateParams.gpid];
+  $scope.sharep = $scope.groups[$stateParams.gpid].sharep;
   $scope.name = $scope.group.name;
   console.log($scope.sharep);
   console.log($scope.name);
   console.log($scope.group);
 
     $scope.delete =function() {
-    console.log($stateParams.gid);
-    firebase.database().ref('group/' + $stateParams.gid).remove();
+    console.log($stateParams.gpid);
+    firebase.database().ref('group/' + $stateParams.gpid).remove();
 
     Group.getData();
     $state.go('tabsController.group');
@@ -409,7 +408,7 @@ function ($scope, $stateParams, $state, $location, $ionicHistory, User) {
       }
     }
     console.log(checkedElems);
-    firebase.database().ref('group/' + $stateParams.gid).update(
+    firebase.database().ref('group/' + $stateParams.gpid).update(
       {sharep:checkedElems}  
     );
     Group.getData();
@@ -454,7 +453,7 @@ function ($scope, $stateParams, $state, $location, $ionicHistory, User) {
         memUpdate.push(Object.keys(data)[0]);
 
         console.log(memUpdate);
-            firebase.database().ref('group/' + $stateParams.gid).update({
+            firebase.database().ref('group/' + $stateParams.gpid).update({
             member:memUpdate
 
           }); 
@@ -462,7 +461,7 @@ function ($scope, $stateParams, $state, $location, $ionicHistory, User) {
         else{
           var memUpdate = $scope.group.member;
           memUpdate.push(Object.keys(data)[0]);
-                    firebase.database().ref('group/' + $stateParams.gid).update({
+                    firebase.database().ref('group/' + $stateParams.gpid).update({
             member:memUpdate
 
         }); 
@@ -474,7 +473,7 @@ function ($scope, $stateParams, $state, $location, $ionicHistory, User) {
         var data = data.val();
               if(data[Object.keys(data)[0]].memberof == null){
             var memOfUpdate = [];
-            memOfUpdate.push($stateParams.gid);
+            memOfUpdate.push($stateParams.gpid);
             console.log(memOfUpdate);
           firebase.database().ref('users/' + Object.keys(data)[0]).update({
             memberof:memOfUpdate
@@ -486,7 +485,7 @@ function ($scope, $stateParams, $state, $location, $ionicHistory, User) {
           var memOfUpdate = data[Object.keys(data)[0]].memberof;
           
           console.log("here");
-          memOfUpdate.push($stateParams.gid);
+          memOfUpdate.push($stateParams.gpid);
           console.log(memOfUpdate);
           firebase.database().ref('users/' + Object.keys(data)[0]).update({
             memberof:memOfUpdate

@@ -54,7 +54,7 @@ angular.module('app.routes', [])
   })
 
   .state('tabsController.ePlansDetail', {
-    url: '/eplans/:pid',
+    url: '/eplans/:epid',
     cache: false,
     views: {
       'tab4': {
@@ -98,7 +98,7 @@ angular.module('app.routes', [])
   })
 
   .state('tabsController.groupDetail', {
-    url: '/group/:gid',
+    url: '/group/:gpid',
     cache:false,
     views: {
       'tab2': {
