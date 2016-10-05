@@ -1,0 +1,46 @@
+<ion-view title="Profile" id="page2">
+    <ion-content padding="true" class="has-header">
+        <div style="margin: 0px; line-height: 250px; text-align: center; background-color: rgb(232, 235, 239);">
+            <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+        </div>
+        <div class="user-info">
+          <div class="fullname row">
+            <div class="left-column">FullName:  </div>
+            <div class="right-column">{{fullname}}</div>
+          </div>
+
+          <div class="dob row">
+            <div class="left-column">DOB:  </div>
+            <div class="right-column">{{dob}}</div>
+          </div>
+
+          <div class="home_address row">
+            <div class="left-column">Address:  </div>
+            <div class="right-column">{{address}}</div>
+          </div>
+
+          <div class="phone row">
+            <div class="left-column">Phone Number:  </div>
+            <div class="right-column">{{phonenumber}}</div>
+          </div>
+
+          <div class="company row">
+            <div class="left-column">Company:  </div>
+            <div class="right-column">{{company}}</div>
+          </div>
+
+          <div class="department row">
+            <div class="left-column">Department:  </div>
+            <div class="right-column">{{department}}</div>
+          </div>
+
+          <div class="position row">
+            <div class="left-column">Position:  </div>
+            <div class="right-column">{{position}}</div>
+          </div>
+
+        </div>
+        <button ng-click="edit_profile()" class="button button-assertive ">Edit Profile</button>
+
+    </ion-content>
+</ion-view>

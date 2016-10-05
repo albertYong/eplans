@@ -1,0 +1,54 @@
+<ion-view title="Groups" id="page4">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+
+          <div class="item item-avatar">
+
+            <label class="item">
+              <span class="input-label">Group Name</span>
+              <input type="text" id="name" placeholder="">
+            </label>
+            <label class="item">
+              <span class="input-label">Description</span>
+              <input type="text" id="desc" placeholder="">
+            </label>
+
+          </div>
+
+          <div class="item item-body">
+            <div class="list">
+
+              <div class="item item-divider">
+                  Add Members after Create
+              </div>
+            </div>
+          </div>
+
+          <div class="item item-body">
+            <div class="list">
+
+              <div class="item item-divider">
+                  Share plans
+              </div>
+
+              <ul class="list">
+
+                <li class="item item-toggle" ng-repeat= "plan in eplans">
+                   {{plan.name}}
+                   <label class="toggle toggle-assertive">
+                     <input type="checkbox" value="{{plan.id}}">
+                     <div class="track">
+                       <div class="handle" ></div>
+                     </div>
+                   </label>
+                </li>
+              </ul>
+
+            
+            </div>
+          </div>
+
+        </div>
+        <button id="ePlans-button1" class="button button-assertive  button-block" ng-click=create()>Create</button>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,28 @@
+<ion-view title="ePlans" id="page3" >
+    <ion-content padding="true" class="has-header">
+
+
+
+          <form id="profile-form" class="userInfo">
+
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                  <span class="input-label">Plan Name</span>
+                  <input type="text" id="name" placeholder="" value="{{name}}">
+                </label>
+                <label class="item item-input item-stacked-label">
+                  <span class="input-label">Description</span>
+                  <input type="text" id="desc" placeholder="" value="{{desc}}">
+                </label>
+                <label class="item item-input item-stacked-label">
+                  <span class="input-label">Content</span>
+
+                  <textarea id="content">{{content}}</textarea>
+                </label>
+            </div>
+
+            </form>
+
+        <button id="ePlans-button1" class="button  button-block" ng-click=submit()>submit</button>
+    </ion-content>
+</ion-view>

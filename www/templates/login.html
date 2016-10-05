@@ -1,0 +1,52 @@
+<ion-view title="Login" id="page3" hide-nav-bar="true" hide-tabs = "true">
+    <ion-content padding="true" class="has-header">
+
+        <div ng-show="login_back">
+            <button class="button button-default" ng-click="show_login()">BACK TO LOGIN</button>
+        </div>
+
+
+        <div ng-show="loginmenu">
+            <h1 id="ePlans-heading1" style="color:grey;">ePlans Login</h1>
+
+            <form id="ePlans-form1" class="list">
+                <label class="item item-input" id="ePlans-input1">
+                    <span class="input-label">Email</span>
+                    <input type="email" id="lemail">
+                </label>
+                 <label class="item item-input" id="ePlans-input1">
+                    <span class="input-label">Password</span>
+                    <input type="password" id="lpass">
+                </label>
+
+            </form>
+            <button id="ePlans-button1" ng-click="login()" class="button button-assertive  button-block">Login</button>
+        </div>
+        <div><p id="messmess"></p></div>
+        <div ng-show="signupmenu">
+            <h1 id="ePlans-heading1" style="color:grey;">Signup</h1>
+            <form id="ePlans-form1" class="list">
+                <label class="item item-input" id="ePlans-input1">
+                    <span class="input-label">Email</span>
+                    <input type="email" id="semail">
+                </label>
+                 <label class="item item-input" id="ePlans-input1">
+                    <span class="input-label">Password</span>
+                    <input type="password"  id="spassword">
+                </label>
+                <label class="item item-input" id="ePlans-input1">
+                    <span class="input-label">Verify Password</span>
+                    <input type="password" id="sreenter">
+                </label>
+
+            </form>
+            <button id="ePlans-button1" class="button button-assertive  button-block" ng-click="signup()">Signup</button>
+        </div>
+        <div><p id="messmess"></p></div>
+
+        <div ng-show="signup_btn">
+             <button class="button button-default" ng-click="show_signup()">SIGNUP</button>
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,37 @@
+/* Empty. Add your own CSS if you like */
+.item-complex .item-content, .item-radio .item-content {
+    background-color: #5E5E5E;
+    color: #fff;
+}
+.bar.bar-stable{
+  background-color: grey;
+}
+.bar.bar-stable .title{
+  background-color: grey;
+  color: #fff;
+}
+.bar-stable .button.button-clear {
+    color: #fff;
+    background-color: grey;
+}
+ion-list#menu-list1 img {
+  margin-left: 20%;
+  padding: 5%;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+a#tipButtonSideMenu{
+  margin: 5%;
+  margin-left: 40%;
+  color: #fff;
+}
+
+.right-column {
+  /*float:right;*/
+}
+.left-column {
+  /*float:left;*/
+}

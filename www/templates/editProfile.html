@@ -1,0 +1,46 @@
+<ion-view title="editProfile" id="page3" >
+    <ion-content padding="true" class="has-header">
+        <div >
+
+            <form id="profile-form" class="userInfo">
+
+                <label class="item item-input" id="profile-input1">
+                    <span class="input-label">Fullname</span>
+                    <input type="text" id="fullname" value={{fullname}}>
+                </label>
+
+
+                <label class="item item-input" id="profile-input1">
+                    <span class="input-label">DOB</span>
+                    <input type="date" id="DOB" value={{dob}}>
+                </label>
+
+                <label class="item item-input" id="profile-input1">
+                    <span class="input-label">Address</span>
+                    <input type="address" id="Address" value={{address}}>
+                </label>
+
+                <label class="item item-input" id="profile-input1">
+                    <span class="input-label">Phone Number</span>
+                    <input type="number" id="Phone Number" value={{phonenumber}}>
+                </label>
+
+                <label class="item item-input" id="profile-input1">
+                    <span class="input-label">Company</span>
+                    <input type="text" id="Company" value={{company}}>
+                </label>
+
+                <label class="item item-input" id="profile-input1">
+                    <span class="input-label">Department</span>
+                    <input type="text" id="Department" value={{department}}>
+                </label>
+
+                <label class="item item-input" id="profile-input1">
+                    <span class="input-label">Position</span>
+                    <input type="text" id="Position" value={{position}}>
+                </label>
+
+                
+            </form>
+            <button id="ePlans-button1" ng-click="uploadPro(uid)" class="button button-assertive button-block">submit</button>
+        </div>

@@ -1,0 +1,30 @@
+<ion-view title="ePlans" id="page3" >
+    <ion-content padding="true" class="has-header">
+
+        <div class="list card">
+
+          <div class="item item-avatar">
+
+            <h2>{{plan.name}}</h2>
+            <p>{{desc}}</p>
+          </div>
+
+          <div class="item item-body">
+
+            <p>
+              {{content}}
+            </p>
+            <p>
+              <a href="#" class="subdued">1 Like</a>
+              <a href="#" class="subdued">5 Comments</a>
+            </p>
+
+
+          </div>
+
+        </div>
+
+
+        <button id="ePlans-button1" class="button button-assertive button-block" ng-click=edit_plan()>Edit Plan</button>
+    </ion-content>
+</ion-view>

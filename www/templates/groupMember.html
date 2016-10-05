@@ -1,0 +1,47 @@
+<ion-view title="Groups" id="page4">
+    <ion-content padding="true" class="has-header">
+        <h1 id="Group-heading1" style="color:#000000;">{{group.name}}</h1>
+        <p>founder: {{group.founder | founder}} </p>
+        <p>description: {{group.description}} </p>
+
+<br>
+
+          <div class="list">
+
+            <div ng-repeat= "plan in group.sharep">
+<!--             <a class="item item-icon-right" ng-href="#/page/groups/members/{{plan}}">
+              {{plan | planName}}
+              <span class="item-note">
+                Details
+              </span>
+            </a> -->
+              <button class="button button-full button-stable" ng-click="redirect(plan)">
+              {{plan | planName}}
+              <span class="item-note">
+                Details
+              </span>
+              </button>
+            </div>
+            </div>
+            <a class="item item-icon-right" href="#">
+
+              Fire
+              <span class="item-note">
+                Detals
+              </span>
+            </a>
+            <a class="item item-icon-right" href="#">
+
+              water
+              <span class="item-note">
+                Detals
+              </span>
+            </a>
+
+        </div>
+<br>
+<br>
+<br>
+    
+    </ion-content>
+</ion-view>

@@ -1,0 +1,46 @@
+<ion-view title="ePlans" id="page3" >
+    <ion-content padding="true" class="has-header">
+        <h1 id="ePlans-heading1" style="color:#000000;">ePlans</h1>
+<br>
+
+          <div class="list">
+
+            <div ng-repeat= "plan in plans">
+            <!-- <a class="item item-icon-right" ng-href="#/page/eplans/{{plan.id}}">
+              {{plan.name}}
+              <span class="item-note">
+                Details
+              </span>
+            </a>
+            </div> -->
+
+            <button class="button button-full button-stable" ng-click="redirect(plan.id)">
+              {{plan.name}}
+              <span class="item-note">
+                Details
+              </span>
+            </button>
+            </div>
+            <a class="item item-icon-right" href="#">
+
+              Defalut plan A
+              <span class="item-note">
+                Detals
+              </span>
+            </a>
+            <a class="item item-icon-right" href="#">
+
+              Default plan B
+              <span class="item-note">
+                Detals
+              </span>
+            </a>
+
+        </div>
+<br>
+<br>
+<br>
+        <button id="ePlans-button1" class="button button-assertive button-block" ng-click=addNew()>Add New</button>
+
+    </ion-content>
+</ion-view>
