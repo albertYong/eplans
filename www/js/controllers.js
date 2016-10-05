@@ -114,7 +114,7 @@ angular.module('app.controllers', [])
 
   console.log($scope.plan);
 
-  $scope.redirect = function (epid) {
+  $scope.redirect1 = function (epid) {
     $state.go('tabsController.ePlansDetail',{epid:epid})
     // body...
   }
