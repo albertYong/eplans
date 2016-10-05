@@ -309,17 +309,17 @@ function ($scope, $stateParams, $state, $location, $ionicHistory, User) {
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
   function ($scope, $state, $stateParams, User, Group) {
-  console.log("hrere");
+  
   $scope.user = User.get();
-  console.log($scope.user);
+  
   $scope.groups = Group.getLocal();
-  console.log($scope.groups); 
-  console.log($scope.user.memberof);
+  
+  
   $scope.group = [];
   angular.forEach($scope.groups, function(value, key) {
     this.push(value.gid);
   }, $scope.group);
-  console.log($scope.group);
+ 
 
   $scope.createGroup = function () {
     $state.go('tabsController.groupAdd');
